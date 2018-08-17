@@ -1,0 +1,40 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+    <title>New Article</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <style type="text/css">
+    p,b{
+      margin-top: 10px;
+      padding: 50px;
+    }
+  </style>
+   </head>
+  <body>
+    <div class = "container">
+    <div class="well well-lg">
+      <p>
+        <b>Title</b>
+        <%= @article.title %> <!-- Displaying Blog tile-->
+      </p>
+      <p>
+       <b>Text</b>
+        <%= @article.text %> <!-- Displaying Blog text-->
+      </p>
+      <%= link_to 'New article', article_path, class: 'btn btn-primary' %> <!-- Create new blog-->
+      <%= link_to 'My Blog', controller: 'articles' %>
+      </div> <!-- Displaying all blog-->
+      </div>
+    </div>
+  <body>
+  <html>
+  

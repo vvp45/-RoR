@@ -1,0 +1,41 @@
+<!-- Index page -->
+<html>
+<head>
+	<title>Bloggersite</title>
+	<meta charset="utf-8">
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <!-- Latest compiled and minified CSS -->
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	  	<!-- jQuery library -->
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	  	<!-- Latest compiled JavaScript -->
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+	  <style type="text/css" media="screen">
+	  	body{
+	  		background-color: #2c5b7c;
+	  	}	
+	  	#header{
+        background: white;
+      }
+    </style>
+</head>
+<body>
+<div id = "header">
+   <div class = "clearfix">
+	<div class = "container">
+	        <h1>Welcome to Ruby on Rails Blog!</h1>
+ 	 <!-- <nav class="navbar navbar-full navbar-dark bg-success"> -->
+		<p class="navbar-text pull-left">
+			<%= link_to 'My Blog', controller: 'articles', class: 'navbar-brand'  %>  
+		<p class="navbar-text pull-right">
+         <%= link_to 'Admin Login', new_admin_session_path, :class => 'navbar-link' %> 
+           <%= link_to 'User Login', new_user_session_path, :class => 'navbar-link' %>
+            </p>
+    </div>
+</div>
+</div>
+</div>
+</body>
+</html>
