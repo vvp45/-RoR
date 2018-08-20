@@ -1,0 +1,2 @@
+module BlogfileHelper
+end
