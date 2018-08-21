@@ -3,9 +3,9 @@ class ArticlesController < ApplicationController
 
 # http_basic_authenticate_with name: "admin", password: "admin123", except: [:index, :create, :show] #User authentications.
 # before_action :set_articles, only: [:show, :edit, :destroy]
-  # before_action :authenticate_user!, except: [:create, :index, :show]
-  # before_action :set_articles, only: [:show, :create, :edit]
-  # before_action :authenticate_admin!, except: [:index, :show]
+# before_action :authenticate_user!, except: [:create, :index, :show]
+# before_action :set_articles, only: [:show, :create, :edit]
+# before_action :authenticate_admin!, except: [:index, :show]
 def new
   @article = Article.new # initializing new article
 end # new function end
@@ -33,7 +33,7 @@ def article_params 	# defination of article_params.
 	params.require(:article).permit(:title, :text, :attachment)
 end
 
-def show		# show function to display the perticular post as per id.
+def show	# show function to display the perticular post as per id.
 	@article = Article.find(params[:id])								
 end 	# show function end
 

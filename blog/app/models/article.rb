@@ -2,6 +2,7 @@
 require 'csv'
 class Article < ApplicationRecord
 	# has_many :comments
+	mount_uploader :attchment, AttachmentUploader
 	validates :title, presence: true,
 					length: { minimum: 5 }
 
