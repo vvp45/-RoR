@@ -228,7 +228,7 @@ DEPENDENCIES
   carrierwave
   coffee-rails (~> 4.2)
   devise
-  devise-bootstrap-views
+  devise-bootstrap-views (~> 1.0)
   jbuilder (~> 2.5)
   paperclip!
   puma (~> 3.7)
