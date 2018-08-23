@@ -30,7 +30,7 @@ end		#  index function end.
 
 public
 def article_params 	# defination of article_params.
-	params.require(:article).permit(:title, :text, :attachment)
+	params.require(:article).permit(:title, :text, [:attachment])
 end
 
 def show	# show function to display the perticular post as per id.

@@ -14,15 +14,17 @@
 	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 	  <style type="text/css" media="screen">
 	  	body{
-	  		background-color: #2c5b7c;
+	  		background: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url("https://unsplash.imgix.net/photo-1416339442236-8ceb164046f8?q=75&fm=jpg&s=8eb83df8a744544977722717b1ea4d09");
+		      background-repeat: no-repeat;
+		      background-size: cover;
+		      background-position: center center;
+		      color: #fff;
+		      height: 450px;
+		      padding-top: 50px;
 	  	}	
-	  	#header{
-        background: white;
-      }
     </style>
 </head>
 <body>
-<div id = "header">
    <div class = "clearfix">
 	<div class = "container">
 	        <h1>Welcome to Ruby on Rails Blog!</h1>
@@ -34,7 +36,6 @@
            <%= link_to 'User Login', new_user_session_path, :class => 'navbar-link' %>
             </p>
     </div>
-</div>
 </div>
 </div>
 </body>
