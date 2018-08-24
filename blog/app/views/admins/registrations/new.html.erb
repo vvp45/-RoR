@@ -28,12 +28,34 @@
       #btn{
         margin-top: 10px;
       }
+      .field{
+      -webkit-text-fill-color: #091631
+     }
+      .card .card-header{
+        color: #ffffff;
+         font-style: italic;
+      }
+      .card{
+        margin-top: 90px;
+        margin-left: 300px;
+        width: 500px;
+        height: 450px;
+      }
+
+    .card .card-footer{
+      position: relative;
+      margin-top: 10%;
+      /*padding: 10px;*/
+     margin-left: -1px;
+    width: 502px;
+    }
   </style>
 </head>
 <body>
   <div class = "clearfix">
   <div class = "container">
-  <h2>Sign up</h2>
+ <div class="card"><div class="card-header">Sign up</div>
+ <div class="card-body">
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= devise_error_messages! %>
 
@@ -59,8 +81,11 @@
     <%= f.submit "Sign up", id: 'btn', class: 'btn btn-primary' %>
   </div>
 <% end %>
-
+</div>
+<div class="card-footer">
 <%= render "admins/shared/links" %>
+</div>
+</div>
 </div>
 </div>
 </body>

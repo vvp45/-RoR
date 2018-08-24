@@ -12,6 +12,7 @@
       -moz-background-size: cover;
       -o-background-size: cover;
       background-size: cover;
+      
     }
       #ex5{
         width: 50%;
@@ -23,22 +24,44 @@
       .field{
         color: #f4f4f7;
       }
-      span{
-        color: #eaeaf5;
-        font-size: 30px;
-      }
+     .field{
+      -webkit-text-fill-color: #091631
+     }
       .panel-default {
         opacity: 0.9;
         margin-top:90px;
-        margin-left: 70px;
+        margin-left: 90px;
       }
+      .card .card-header{
+        color: #000000;
+         font-style: italic;
+      }
+      .card{
+        margin-top: 90px;
+        margin-left: 300px;
+        width: 500px;
+        height: 450px;
+      }
+     .card .card-body{
+      padding-left: 10%;
+     }
+    .card .card-footer{
+      position: relative;
+      margin-top: 24%;
+      /*padding: 10px;*/
+          margin-left: -50px;
+    width: 498px;
+    }
     </style>
 </head>
 <body>
    <div class="container">
-            <div class="panel panel-default">
-               <div class="panel-heading">
-                  <span class="glyphicon glyphicon-lock">Log in</span></div>
+            <!-- <div class="panel panel-default"> -->
+               <div class="column">
+                  <div class="col-md-4 col-md-offset-7">
+                <div class="card">
+                  <div class = "card-header">Login</div>
+                  <div class = "card-body">
                 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
                   <div class="field">
                     <%= f.label :email %><br />
@@ -49,22 +72,24 @@
                     <%= f.label :password %><br />
                     <%= f.password_field :password, autocomplete: "off", class: 'col-sm-3 control-label', class: 'form-control', id: 'ex6' %>
                   </div>
-
+                    
                   <% if devise_mapping.rememberable? -%>
                     <div class="field">
                       <%= f.check_box :remember_me %>
                       <%= f.label :remember_me, class: 'col-sm-offset-3 col-sm-9' %>
                     </div>
                   <% end -%>
-
+                  
                   <div class="actions">
                     <%= f.submit "Log in", class: 'btn btn-primary' %>
                   </div>
-<% end %>
-<%= render "admins/shared/links" %>
-</div>
-</div>
-</div>
-</div>
-</body>
+            <% end %>
+              <div class="card-footer">
+                <%= render "admins/shared/links" %>
+              </div>
+         </div>
+      </div>
+     </div>
+    </div>
+  </body>
 </html>

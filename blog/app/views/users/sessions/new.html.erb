@@ -21,15 +21,38 @@
       #ex6{
         width: 50%;
       }
-      #lbl{
+      .field{
         margin-right: 50px;
+        -webkit-text-fill-color: #091631
       }
+      .card .card-header{
+        color: #000000;
+         font-style: italic;
+      }
+      .card{
+        margin-top: 90px;
+        margin-left: 300px;
+        width: 500px;
+        height: 450px;
+      }
+     .card .card-body{
+      padding-left: 10%;
+     }
+    .card .card-footer{
+      position: relative;
+         margin-top: 13%;
+    /* padding: 10px; */
+    margin-left: 1px;
+    width: 498px;
+    }
     </style>
 </head>
 <body>
    <div class = "clearfix">
   <div class = "container">
-  <h2>Log in</h2>
+    <div class="card">
+  <div class="card-header">Login in</div>
+  <div class="card-body">
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email, id: 'lbl' %><br />
@@ -52,7 +75,13 @@
     <%= f.submit "Log in", class: 'btn btn-primary' %>
   </div>
 <% end %>
+</div>
+
+<div class="card-footer">
 <%= render "users/shared/links" %>
+</div>
+</div>
+</div>
 </div>
 </div>
 </body>
