@@ -29,12 +29,8 @@ ActiveRecord::Schema.define(version: 20180820115804) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
-  create_table "articles", force: :cascade do |t|
-    t.string "title"
-    t.text "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+# Could not dump table "articles" because of following StandardError
+#   Unknown type 'attachment' for column 'string'
 
   create_table "blog_files", force: :cascade do |t|
     t.string "name"
@@ -42,6 +38,16 @@ ActiveRecord::Schema.define(version: 20180820115804) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+create_table "submits", force: :cascade do |t|
+    t.string   "name"
+    t.string   "attachment"
+    # t.integer  "assignment_id"
+    # t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
 
   create_table "comments", force: :cascade do |t|
     t.string "commenter"

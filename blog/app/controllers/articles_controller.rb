@@ -1,11 +1,9 @@
 # This class is inherited from ApplicationController when you created new controller.
 class ArticlesController < ApplicationController
 
-# http_basic_authenticate_with name: "admin", password: "admin123", except: [:index, :create, :show] #User authentications.
-# before_action :set_articles, only: [:show, :edit, :destroy]
-# before_action :authenticate_user!, except: [:create, :index, :show]
-# before_action :set_articles, only: [:show, :create, :edit]
-# before_action :authenticate_admin!, except: [:index, :show]
+  before_action :set_articles, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, except: [:index, :show, :new, :create]
+
 def new
   @article = Article.new # initializing new article
 end # new function end
@@ -18,9 +16,9 @@ def create
 	else	
 		render 'new' # otherwise render to new page.
 	end
-end						# create function end.
+end					# create function end.
 
-def index	 			# definig the index function to display the all posts.
+def index	 		# definig the index function to display the all posts.
 	@articles = Article.all
 	respond_to do |format|
 		format.html
@@ -30,7 +28,7 @@ end		#  index function end.
 
 public
 def article_params 	# defination of article_params.
-	params.require(:article).permit(:title, :text, [:attachment])
+	params.require(:article).permit(:title, :text, :attachment)
 end
 
 def show	# show function to display the perticular post as per id.
